@@ -1,0 +1,318 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.2s ease;
+}
+.accordion-content.active {
+  max-height: 1000px; 
+  transition: max-height 1.2s ease;
+}
+
+.accordion-button {
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.accordion-button:focus {
+  outline: none;
+}
+
+.accordion-button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; 
+}
+
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 0.1px;
+  background-color: #FFFFFF;
+}
+
+.dark-mode .toggle-button {
+  background-color: black;
+  color: #FFFFFF;
+}
+
+.toggle-button.active {
+  transform: rotate(180deg);
+}
+
+h5 {
+  text-align: center;
+}
+
+.dark-mode table.comparison-table thead th {
+  background-color: black;
+}
+
+.dark-mode table.comparison-table {
+  background-color: black;
+  box-shadow: 0 0 0 1px #ffffff;
+  border-color: #ffffff;
+  border-collapse: collapse;
+}
+
+.dark-mode table.comparison-table th {
+  background-color: black;
+  color: white;
+  border-color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white; 
+}
+
+.dark-mode table.comparison-table td {
+  background-color: black;
+  color: white;
+  border-color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white; 
+}
+
+
+
+
+
+
+.dark-mode table.another-table {
+  box-shadow: 0 0 0 1px #ffffff;
+  border-color: #ffffff;
+  border-collapse: collapse;
+}
+
+.dark-mode table.another-table th {
+  border-color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white; 
+}
+
+.dark-mode table.another-table td {
+  border-color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white; 
+}
+
+
+.dark-mode h4 {
+  color: white;
+}
+
+.dark-mode h5 {
+  color: white;
+}
+
+.dark-mode .accordion-button {
+  color: white;
+  border-color: white;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 25px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 25px;
+}
+
+p {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border: black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-form button {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #474350;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+table.comparison-table {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  background-color: #474350;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #000000;
+
+}
+
+table.comparison-table th {
+  padding: 10px;
+  text-align: center;
+  background-color: #474350;
+  color: #ffffff;
+}
+
+table.comparison-table td {
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+table.comparison-table thead {
+  background-color: #474350;
+  color: #ffffff;
+}
+
+table.comparison-table th:first-child,
+table.comparison-table td:first-child {
+  font-weight: bold;
+}
+
+table.comparison-table th {
+  width: 20%;
+}
+
+table.comparison-table td {
+  width: 15%;
+}
+
+/* Apply styling to the "another-table" */
+table.another-table {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  background-color: #000000;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table.another-table th {
+  padding: 10px;
+  text-align: center;
+  background-color: #fa6767;
+  color: #000000;
+  border: 1px solid #000000; /* Add border for headers */
+}
+
+table.another-table td {
+  padding: 10px;
+  text-align: center;
+  background-color: #fa6767;
+  border: 1px solid #000000; /* Add border for data cells */
+}
+
+table.another-table thead {
+  background-color: #fa6767;
+  color: #000000;
+}
+
+table.another-table th:first-child,
+table.another-table td:first-child {
+  font-weight: 600;
+}
+
+.table-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25vh; /* Adjust the minimum height as needed */
+  margin: 0 auto; /* Center horizontally by setting left and right margin to "auto" */
+  max-width: 800px; /* Adjust the maximum width as needed */
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+  .search-form input[type="text"] {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 24px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  .search-form input[type="text"] {
+    width: 150px;
+  }
+
+  .toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 70px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 0.1px;
+    background-color: #FFFFFF;
+  }
+
+}

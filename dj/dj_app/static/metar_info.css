@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-mode {
+  background-color: #000000;
+}
+
+body.dark-mode thead{
+  color: #FFFFFF;
+}
+
+.dark-mode .search-form button{
+  border: 1px solid white
+}
+
+.dark-mode tr:nth-child(odd) {
+  color: #ffffff;
+}
+
+.dark-mode tr:nth-child(even) {
+  color: #000000;
+}
+
+.dark-mode .table {
+  background-color: black;
+  border-collapse: separate;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+
+h1 {
+  font-size: 10;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h3 {
+  font-size: 50;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+
+p {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.table {
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 550px;
+  background-color: #474350;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  overflow: hidden;
+  overflow: black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #000000;
+}
+
+thead {
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+tbody tr:nth-child(odd) {
+  color: #ffffff;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border:black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-form button {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #474350;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .search-form input[type="text"] {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .search-form input[type="text"] {
+    width: 150px;
+  }
+}

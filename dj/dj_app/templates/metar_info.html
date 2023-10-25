@@ -1,0 +1,32 @@
+{% extends "dj_app/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'metar_info.css' %}">
+<div class="search-form-wrapper">
+  <h3> Weather for {{airport}}</h3>
+  {% if weather %}
+  <table class="table">
+    <tbody>
+      {% for title, raw_data  in weather.items %}
+        <tr>
+          <th>{{ title }}</th>
+          <td>{{ raw_data|safe }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+    <p>No weather informamtion found for {{airport}}. Try `w kewr`</p>
+
+  {% endif %}
+  {% csrf_token %}
+    <form method="post" class="search-form">
+        {% csrf_token %}
+        <label for="query"></label>
+        <input type="text" name="query" id="query">
+        <button type="submit">Search</button>
+    </form>
+{% endblock %}

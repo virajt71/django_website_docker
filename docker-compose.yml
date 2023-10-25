@@ -1,18 +1,18 @@
 version: '3'
 
 services:
-  app:
+  dj:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
     volumes:
-      - ./app:/app
+      - ./dj:/dj
     # depends_on:
     #   - db
     environment:
-      - DJANGO_SETTINGS_MODULE=app.settings
+      - DJANGO_SETTINGS_MODULE=dj.settings
     networks:
       - mynet
 
@@ -23,7 +23,7 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - app
+      - dj
     networks:
       - mynet
 
